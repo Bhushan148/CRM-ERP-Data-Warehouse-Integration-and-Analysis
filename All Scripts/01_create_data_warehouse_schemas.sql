@@ -7,18 +7,18 @@ Author: Bhushan Gawali
 Role: Data Analyst  
 
 Description:
-    This script is part of my real-time **PostgreSQL-based Data Warehouse project**, 
-    designed to integrate and analyze **CRM & ERP data**. It creates a structured 
+    This script is part of my real-time PostgreSQL-based Data Warehouse project, 
+    designed to integrate and analyze CRM & ERP data. It creates a structured 
     database environment for efficient data processing by establishing three schema 
-    layers following best **Data Warehousing** practices:
+    layers following best Data Warehousing practices:
 
-    🔹 **Bronze Layer** → Ingests raw, unprocessed data from multiple sources (CSV, APIs).  
-    🔹 **Silver Layer** → Cleanses, transforms, and normalizes data for business rules.  
-    🔹 **Gold Layer** → Stores finalized, aggregated data optimized for reporting & analytics.  
+    🔹 Bronze Layer → Ingests raw, unprocessed data from multiple sources (CSV, APIs).  
+    🔹 Silver Layer → Cleanses, transforms, and normalizes data for business rules.  
+    🔹 Gold Layer → Stores finalized, aggregated data optimized for reporting & analytics.  
 
 Warning:
-    🚨 **This script drops the existing 'data_warehouse' database if it exists.**  
-    🚨 **Ensure you have backups before running this script to prevent data loss.**  
+    🚨 This script drops the existing 'data_warehouse' database if it exists.  
+    🚨 Ensure you have backups before running this script to prevent data loss.  
 */
 
 -- Terminate active connections to prevent conflicts during database drop
@@ -37,3 +37,4 @@ CREATE DATABASE data_warehouse;
 CREATE SCHEMA bronze;  -- Raw data ingestion layer  
 CREATE SCHEMA silver;  -- Cleansed & transformed business logic layer  
 CREATE SCHEMA gold;    -- Aggregated, analytics-ready reporting layer  
+
